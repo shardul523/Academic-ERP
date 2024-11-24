@@ -6,7 +6,6 @@ import org.esdpracticals.academicerp.dto.LoginResponse;
 import org.esdpracticals.academicerp.entity.Employee;
 import org.esdpracticals.academicerp.jwt.JwtHelper;
 import org.esdpracticals.academicerp.repo.EmployeeRepository;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service

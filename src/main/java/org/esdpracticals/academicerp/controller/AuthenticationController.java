@@ -4,7 +4,6 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.esdpracticals.academicerp.dto.LoginRequest;
 import org.esdpracticals.academicerp.dto.LoginResponse;
-import org.esdpracticals.academicerp.entity.Employee;
 import org.esdpracticals.academicerp.service.EmployeeService;
 import org.esdpracticals.academicerp.service.EncryptionService;
 import org.springframework.http.HttpStatus;
