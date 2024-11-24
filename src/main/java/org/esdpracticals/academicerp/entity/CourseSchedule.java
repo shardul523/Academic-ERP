@@ -22,6 +22,8 @@ public class CourseSchedule {
     private Course course;
 
     private Date time;
+
+    @Column(name = "`day`")
     private String day;
     private String room;
     private String building;
