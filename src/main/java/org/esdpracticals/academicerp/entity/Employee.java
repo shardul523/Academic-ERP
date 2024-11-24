@@ -25,8 +25,12 @@ public class Employee {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
+    @Column(name = "password", nullable = false)
+    private String password;
+
     private String title;
 
     @Column(name = "photograph_path")
     private String photographPath;
+
 }
