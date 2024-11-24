@@ -24,8 +24,7 @@ public class SecurityConfig implements WebMvcConfigurer {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests(request -> request.requestMatchers("/**").permitAll()
-                .anyRequest().authenticated());
+        http.authorizeHttpRequests(request -> request.anyRequest().permitAll());
         http.csrf(AbstractHttpConfigurer::disable);
         http.headers(header -> header.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));
         http.httpBasic(Customizer.withDefaults());
@@ -35,7 +34,8 @@ public class SecurityConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(requestInterceptor).addPathPatterns("/api/v1/**");
+        registry.addInterceptor(requestInterceptor).addPathPatterns("/api/v1/**")
+        .excludePathPatterns("/api/v1/auth/**");
     }
 
     @Bean
