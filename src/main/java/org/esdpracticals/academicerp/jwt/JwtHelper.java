@@ -3,7 +3,6 @@ package org.esdpracticals.academicerp.jwt;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-import org.esdpracticals.academicerp.config.Role;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -23,7 +22,7 @@ public class JwtHelper {
         return Keys.hmacShaKeyFor(bytesKey);
     }
 
-    public String generateToken(Role role, Long userId) {
+    public String generateToken(String role, Long userId) {
         Map<String, Object> claims = new HashMap<>();
         claims.put("role", role);
         claims.put("userId", userId);
@@ -48,12 +47,14 @@ public class JwtHelper {
 
     public Long getUserIdFromToken(String token) {
         Claims claims = extractAllClaims(token);
-        return (Long) claims.get("userId");
+        Object value = claims.get("userId");
+        if (value instanceof Long) return (Long) value;
+        return Long.valueOf((Integer) value);
     }
 
-    public Role getRoleFromToken(String token) {
+    public String getRoleFromToken(String token) {
         Claims claims = extractAllClaims(token);
-        return (Role) claims.get("role");
+        return (String) claims.get("role");
     }
 
     public boolean validateToken(String token) {
