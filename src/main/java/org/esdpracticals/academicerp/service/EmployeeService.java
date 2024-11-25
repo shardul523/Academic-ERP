@@ -1,6 +1,7 @@
 package org.esdpracticals.academicerp.service;
 
 import lombok.RequiredArgsConstructor;
+import org.esdpracticals.academicerp.config.Role;
 import org.esdpracticals.academicerp.dto.LoginRequest;
 import org.esdpracticals.academicerp.dto.LoginResponse;
 import org.esdpracticals.academicerp.entity.Employee;
@@ -24,7 +25,7 @@ public class EmployeeService {
             return new LoginResponse(false, "Invalid email or password", null);
         }
 
-        String token = jwtHelper.generateToken("FACULTY", employee.getEmployeeId());
+        String token = jwtHelper.generateToken(Role.EMPLOYEE, employee.getEmployeeId());
 
         return new LoginResponse(true, "Authenticated", token);
     }
