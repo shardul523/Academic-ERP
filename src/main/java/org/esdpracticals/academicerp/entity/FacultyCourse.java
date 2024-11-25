@@ -15,7 +15,7 @@ public class FacultyCourse {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JoinColumn
+    @JoinColumn(name = "faculty")
     @ManyToOne
     private Employee faculty;
 
