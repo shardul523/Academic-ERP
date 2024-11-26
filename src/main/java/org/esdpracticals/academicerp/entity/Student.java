@@ -38,7 +38,7 @@ public class Student {
     Integer totalCredits;
 
     @Column(name = "\"year\"")
-    String year;
+    Integer year;
 
     @JoinColumn(name = "specialisation")
     @ManyToOne
