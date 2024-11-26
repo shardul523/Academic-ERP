@@ -2,7 +2,7 @@ package org.esdpracticals.academicerp.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
-import org.esdpracticals.academicerp.dto.CourseDTO;
+import org.esdpracticals.academicerp.dto.FacultyCourseScheduleResponse;
 import org.esdpracticals.academicerp.service.EmployeeService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,7 @@ public class EmployeeController {
     private final EmployeeService employeeService;
 
     @GetMapping("/courses")
-    public ResponseEntity<List<CourseDTO>> getEmployeeCourses(HttpServletRequest request) {
+    public ResponseEntity<List<FacultyCourseScheduleResponse>> getEmployeeCourses(HttpServletRequest request) {
         return ResponseEntity.ok(employeeService.getEmployeeCourses(request));
     }
 }

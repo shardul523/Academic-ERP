@@ -3,12 +3,10 @@ package org.esdpracticals.academicerp.service;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.esdpracticals.academicerp.config.Role;
-import org.esdpracticals.academicerp.dto.CourseDTO;
-import org.esdpracticals.academicerp.dto.LoginRequest;
-import org.esdpracticals.academicerp.dto.LoginResponse;
+import org.esdpracticals.academicerp.dto.*;
 import org.esdpracticals.academicerp.entity.Employee;
 import org.esdpracticals.academicerp.jwt.JwtHelper;
-import org.esdpracticals.academicerp.mapper.EmployeeMapper;
+import org.esdpracticals.academicerp.mapper.CourseScheduleMapper;
 import org.esdpracticals.academicerp.repo.EmployeeRepository;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
@@ -21,7 +19,7 @@ public class EmployeeService {
     private final JwtHelper jwtHelper;
     private final EmployeeRepository employeeRepository;
     private final EncryptionService encryptionService;
-    private final EmployeeMapper employeeMapper;
+    private final CourseScheduleMapper courseScheduleMapper;
 
     public LoginResponse login(LoginRequest loginRequest) {
         String email = loginRequest.email();
@@ -38,12 +36,11 @@ public class EmployeeService {
         return new LoginResponse(true, "Authenticated", token);
     }
 
-    public List<CourseDTO> getEmployeeCourses(HttpServletRequest request) {
+    public List<FacultyCourseScheduleResponse> getEmployeeCourses(HttpServletRequest request) {
         String role = (String) request.getAttribute("role");
         if (!role.equals(Role.EMPLOYEE)) throw new AccessDeniedException("Access Denied");
         Long userId = (Long) request.getAttribute("userId");
 
-        return employeeRepository.findCoursesByEmpId(userId)
-                .stream().map(employeeMapper::entityToDto).toList();
+        return employeeRepository.findCoursesByEmpId(userId);
     }
 }
