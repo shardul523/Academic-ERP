@@ -1,6 +1,5 @@
 package org.esdpracticals.academicerp.repo;
 
-import org.esdpracticals.academicerp.dto.StudentDetailsDTO;
 import org.esdpracticals.academicerp.entity.Course;
 import org.esdpracticals.academicerp.entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
