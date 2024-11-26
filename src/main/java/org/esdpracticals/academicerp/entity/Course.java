@@ -29,4 +29,8 @@ public class Course {
     String faculty;
     Integer credits;
     Integer capacity;
+
+    @JoinColumn
+    @OneToOne(mappedBy = "course")
+    CourseSchedule courseSchedule;
 }

@@ -18,10 +18,10 @@ public class CourseSchedule {
     private Long id;
 
     @JoinColumn(name = "course_id")
-    @ManyToOne
+    @OneToOne
     private Course course;
 
-    private Date time;
+    private String time;
 
     @Column(name = "`day`")
     private String day;
