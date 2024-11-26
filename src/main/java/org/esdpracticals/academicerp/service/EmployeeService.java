@@ -6,7 +6,6 @@ import org.esdpracticals.academicerp.config.Role;
 import org.esdpracticals.academicerp.dto.*;
 import org.esdpracticals.academicerp.entity.Employee;
 import org.esdpracticals.academicerp.jwt.JwtHelper;
-import org.esdpracticals.academicerp.mapper.CourseScheduleMapper;
 import org.esdpracticals.academicerp.repo.EmployeeRepository;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
