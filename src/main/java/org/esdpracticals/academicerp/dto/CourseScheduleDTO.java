@@ -3,8 +3,6 @@ package org.esdpracticals.academicerp.dto;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 
-import java.util.Date;
-
 @Builder
 public record CourseScheduleDTO(
         @NotNull

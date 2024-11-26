@@ -19,7 +19,6 @@ public class EmployeeService {
     private final JwtHelper jwtHelper;
     private final EmployeeRepository employeeRepository;
     private final EncryptionService encryptionService;
-    private final CourseScheduleMapper courseScheduleMapper;
 
     public LoginResponse login(LoginRequest loginRequest) {
         String email = loginRequest.email();
