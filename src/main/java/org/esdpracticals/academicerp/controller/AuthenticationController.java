@@ -23,7 +23,6 @@ public class AuthenticationController {
     @PostMapping("/employee")
     public ResponseEntity<LoginResponse> loginEmployee(@RequestBody @Valid LoginRequest loginRequest) {
         EncryptionService service = new EncryptionService(new BCryptPasswordEncoder());
-        System.out.println(service.encryptPassword("test1234"));
         LoginResponse res = employeeService.login(loginRequest);
         if (res.authenticated())
             return new ResponseEntity<>(res, HttpStatus.OK);
