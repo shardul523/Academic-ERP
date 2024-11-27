@@ -4,7 +4,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.esdpracticals.academicerp.dto.EmployeeDetailsResponse;
 import org.esdpracticals.academicerp.dto.FacultyCourseScheduleResponse;
-import org.esdpracticals.academicerp.entity.Employee;
 import org.esdpracticals.academicerp.service.EmployeeService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

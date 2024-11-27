@@ -1,8 +1,6 @@
 package org.esdpracticals.academicerp.mapper;
 
-import org.esdpracticals.academicerp.dto.CourseDTO;
 import org.esdpracticals.academicerp.dto.EmployeeDetailsResponse;
-import org.esdpracticals.academicerp.entity.Course;
 import org.esdpracticals.academicerp.entity.Employee;
 import org.springframework.stereotype.Component;
 
