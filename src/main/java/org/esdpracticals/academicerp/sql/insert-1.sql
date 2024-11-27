@@ -26,13 +26,13 @@ VALUES
     ('Jack', 'Robinson', 'jack.robinson@example.com', '$2a$10$dplcl8Rd0MidFBX/yRK4EuGFUqd3j8vPXiRiQk3ExvZL2p3J.e0ze', 'Lecturer'),
     ('Karen', 'White', 'karen.white@example.com', '$2a$10$dplcl8Rd0MidFBX/yRK4EuGFUqd3j8vPXiRiQk3ExvZL2p3J.e0ze', 'Lecturer');
 
-INSERT INTO Specialisation (code, name, description, "year", credits_required)
+INSERT INTO Specialisation (code, name, description, `year`, credits_required)
 VALUES
     ('CSAI', 'Artificial Intelligence', 'A specialization focusing on the foundations and applications of AI, including machine learning and data processing techniques.', 4, 120),
     ('CSDS', 'Data Science', 'A specialization emphasizing statistical analysis, data modeling, and practical implementation of data-driven solutions.', 4, 115),
     ('CSCY', 'Cybersecurity', 'A specialization dedicated to securing networks, systems, and applications against cyber threats and vulnerabilities.', 4, 110);
 
-INSERT INTO Students (roll_number, first_name, last_name, email, cgpa, total_credits, "year", specialisation)
+INSERT INTO Students (roll_number, first_name, last_name, email, cgpa, total_credits, `year`, specialisation)
 VALUES
     ('CSAI1001', 'John', 'Doe', 'john.doe@example.com', 3.75, 90, 3, 1),
     ('CSDS1002', 'Jane', 'Smith', 'jane.smith@example.com', 3.90, 95, 4, 2),
