@@ -25,7 +25,7 @@ public class Specialisation {
     private String description;
 
     @Column(name = "\"year\"")
-    private String year;
+    private Integer year;
 
     @Column(name = "credits_required")
     private Integer creditsRequired;

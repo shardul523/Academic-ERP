@@ -11,7 +11,7 @@ public record CourseDTO(
         String courseCode,
         String name,
         String description,
-        String year,
+        Integer year,
         String term,
         String faculty,
         Integer credits,

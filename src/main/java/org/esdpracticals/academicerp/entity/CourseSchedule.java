@@ -20,10 +20,10 @@ public class CourseSchedule {
     @OneToOne
     private Course course;
 
-    private String time;
+    private Integer time;
 
     @Column(name = "`day`")
-    private String day;
+    private Integer day;
     private String room;
     private String building;
 }

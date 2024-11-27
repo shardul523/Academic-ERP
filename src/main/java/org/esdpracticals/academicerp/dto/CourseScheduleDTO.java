@@ -7,8 +7,8 @@ import lombok.Builder;
 public record CourseScheduleDTO(
         @NotNull
         CourseDTO course,
-        String time,
-        String day,
+        Integer time,
+        Integer day,
         String room,
         String building
 ) {

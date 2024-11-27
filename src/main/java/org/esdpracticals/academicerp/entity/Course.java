@@ -23,7 +23,7 @@ public class Course {
     String description;
 
     @Column(name = "\"year\"")
-    String year;
+    Integer year;
 
     String term;
     String faculty;
