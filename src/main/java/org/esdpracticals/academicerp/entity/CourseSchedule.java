@@ -17,7 +17,7 @@ public class CourseSchedule {
     private Long id;
 
     @JoinColumn(name = "course_id")
-    @OneToOne
+    @ManyToOne
     private Course course;
 
     private Integer time;

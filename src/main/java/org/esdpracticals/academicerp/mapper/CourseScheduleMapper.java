@@ -16,6 +16,7 @@ public class CourseScheduleMapper {
                 .course(courseMapper.entityToDto(courseSchedule.getCourse()))
                 .room(courseSchedule.getRoom())
                 .time(courseSchedule.getTime())
+                .building(courseSchedule.getBuilding())
                 .build();
     }
 }

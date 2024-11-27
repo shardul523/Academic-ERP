@@ -12,7 +12,7 @@ CREATE TABLE Courses (
 
 CREATE TABLE Course_Schedule (
     id          BIGINT AUTO_INCREMENT PRIMARY KEY,
-    course_id   BIGINT NOT NULL UNIQUE,
+    course_id   BIGINT NOT NULL,
     `time`      INT NOT NULL,
     day       INT NOT NULL,
     room        VARCHAR(255),
