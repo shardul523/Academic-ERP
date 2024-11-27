@@ -14,6 +14,7 @@ public class StudentMapper {
                 .email(student.getEmail())
                 .photographPath(student.getPhotographPath())
                 .rollNumber(student.getRollNumber())
+                .specialisation(student.getSpecialisation().getName())
                 .build();
     }
 }

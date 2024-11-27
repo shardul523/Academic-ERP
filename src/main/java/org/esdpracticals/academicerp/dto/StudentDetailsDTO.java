@@ -8,6 +8,7 @@ public record StudentDetailsDTO(
         String firstName,
         String lastName,
         String email,
-        String photographPath
+        String photographPath,
+        String specialisation
 ) {
 }

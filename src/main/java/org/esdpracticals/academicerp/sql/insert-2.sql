@@ -12,7 +12,8 @@ VALUES
     (10, 3, 2, 'Room 302', 'Cybersecurity Center'),
     (11, 4, 3, 'Room 303', 'Cybersecurity Center'),
     (12, 5, 4, 'Room 304', 'Cybersecurity Center'),
-    (1, 3, 3, 'Room 101', 'AI Building');
+    (1, 3, 3, 'Room 101', 'AI Building'),
+    (11, 1, 4, 'Room 303', 'Cybersecurity Center');
 
 INSERT INTO Faculty_Courses (faculty, course_id)
 VALUES
@@ -48,4 +49,6 @@ INSERT INTO Student_Courses (student_id, course_id)
 VALUES
     (1, 1),
     (2, 1),
-    (3, 1);
+    (3, 1),
+    (9, 11)
+    (12, 11);
